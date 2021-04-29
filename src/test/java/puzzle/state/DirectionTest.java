@@ -12,6 +12,10 @@ class DirectionTest {
         assertSame(Direction.RIGHT, Direction.of(0, 1));
         assertSame(Direction.DOWN, Direction.of(1, 0));
         assertSame(Direction.LEFT, Direction.of(0, -1));
+    }
+
+    @Test
+    void of_shouldThrowIllegalArgumentException() {
         assertThrows(IllegalArgumentException.class, () -> Direction.of(0, 0));
     }
 
